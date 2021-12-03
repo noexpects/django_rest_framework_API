@@ -21,6 +21,8 @@ env = environ.Env(
     DJANGO_DEBUG=(bool, False),
     DJANGO_SECRET_KEY=(str, "CHANGEME!!!e8!@e($0_flznbb3fa2d4zg7zn@%yyk2"),
     DJANGO_ALLOWED_HOSTS=(list, []),
+    DJANGO_STATIC_ROOT=(str, str(APPS_DIR('staticfiles'))),
+    DJANGO_MEDIA_ROOT=(str, str(APPS_DIR('media'))),
     DJANGO_DATABASE_ENGINE=(str, "django.db.backends.postgresql_psycopg2"),
     POSTGRES_DB=(str, "django_rest_api"),
     POSTGRES_USER=(str, "postgres"),
@@ -144,9 +146,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = "/static/"
+STATIC_ROOT = env('DJANGO_STATIC_ROOT')
 
 MEDIA_URL = "/media/"
-
+MEDIA_ROOT = env('DJANGO_MEDIA_ROOT')
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
