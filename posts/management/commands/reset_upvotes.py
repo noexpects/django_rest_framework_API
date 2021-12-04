@@ -6,8 +6,5 @@ from posts.models import Post
 class Command(BaseCommand):
     help = 'Resets all posts upvotes'
 
-    def handle(self, *args, **options):
-        posts = Post.objects.all()
-        for post in posts:
-            post.upvotes = 0
-            post.save()
+    def handle(self, *args, **options) -> None:
+        Post.objects.all().update(upvotes=0)
