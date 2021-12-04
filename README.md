@@ -10,12 +10,10 @@
 - Clone this repository.
 - Open CMD in project's folder
 - Run next commands:
-'''
     1. docker-compose build
     2. docker-compose up
     3. docker-compose exec web python manage.py migrate
     4. docker-compose exec web python manage.py createsuperuser
-'''    
 ## **Some links:**
 
 - [Project deployed on Heroku](https://drfapitesttask.herokuapp.com/api/v1/posts/)
