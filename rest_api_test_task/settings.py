@@ -10,9 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-from pathlib import Path
-import environ
 import os
+from pathlib import Path
+
+import django_heroku
+import environ
 
 ROOT_DIR = environ.Path(__file__) - 2  # (/a/myfile.py - 2 = /)
 APPS_DIR = ROOT_DIR.path("rest_api_test_task")
@@ -154,3 +156,5 @@ MEDIA_ROOT = env('DJANGO_MEDIA_ROOT')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+django_heroku.settings(locals())
