@@ -22,7 +22,7 @@
 - [Postman Enviroment for local testing](https://go.postman.co/workspace/My-Workspace~a6d0930c-7408-45c8-873a-9cf15863e4e6/environment/18640363-110c8fb3-7679-4c1a-a5b2-4d420267c317)
 
 #### P.S.
-Reseting post's upvotes perfomed with free Heroku Scheduler add-on. 
+Resseting posts upvotes counter perfomed with free Heroku Scheduler add-on. 
 It runs custom management command once a day at 12:00 AM.
 
 If you want to reset the upvote counter of all posts locally, run the following command:
