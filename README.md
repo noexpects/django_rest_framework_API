@@ -4,6 +4,7 @@
 - Posts should have CRUD API to manage comments on them. The comment will have the next fields: author-name, content, creation date
 - There should be an endpoint to upvote the post
 - We should have a recurring job running once a day to reset post upvotes count.
+- Task usually takes from 4 to 6 hours. If you need more time, you're good to take it and it's appreciated, but results should be sent no later than 48 hours after the start
 
 ## **Steps to run project with Docker:**
 
